@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>PlusWk6Homework</title>
+  </head>
+  
+  <body>
+    <div class="container">
+      <form class="sarch-form" id="search-form">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                class="form-control shadow-sm"
+                placeholder="Choose a different city"
+                autofocus="on"
+                autocomplete="off"
+                aria-label="Choose a different city"
+                aria-describedby="button-addon2>"
+                id="cityInput"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                type="button"
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+           <div class="float-top-left">Results for</div>
+        <br />
+        <h1 class="city" id="city">
+          <strong>  </strong>
+        </h1>
+        <br />
+        <h3 id="todaysDate"></h3>
+
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+
+        <div class="row">
+          <div class="col col-lg-4">
+            <img
+              src="images.jpg/partlyCloudyicon.jpg"
+              alt="sunCloudsIcon"
+              width="120px"
+            />
+          </div>
+          <div class="col-4">
+            <div class="float-left">
+              <span class="temperature" id="temperature"></span>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button
+                type="button"
+                class="btn btn-secondary shadow"
+                id="fahrenheit"
+              >
+                <strong> ℉ </strong>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary shadow"
+                id="celcius"
+              >
+                ℃
+              </button>
+            </div>
+          </div>
+
+          <div class="col col-lg-4">
+            <ul>
+              <li>Humidity: <span id="humidity"> </span> %</li>
+              <li>Wind: <span id="wind"> </span> mph</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <br />
+
+        <div class="card-group">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body mt-2 rounded shadow">
+              <h5 class="card-title">
+                <nobr>Sun</nobr>
+              </h5>
+              <p class="card-text">🌥</p>
+              <p class="card-text">
+                <nobr>65℉</nobr>
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body mt-2 rounded shadow">
+              <h5 class="card-title">
+                <nobr>Mon</nobr>
+              </h5>
+              <p class="card-text">🌦</p>
+              <p class="card-text">
+                <nobr>60℉</nobr>
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body mt-2 rounded shadow">
+              <h5 class="card-title">
+                <nobr>Tue</nobr>
+              </h5>
+              <p class="card-text">🌞</p>
+              <p class="card-text">
+                <nobr>65℉</nobr>
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body mt-2 rounded shadow">
+              <h5 class="card-title">
+                <nobr>Wed</nobr>
+              </h5>
+              <p class="card-text">☀</p>
+              <p class="card-text">
+                <nobr>65℉</nobr>
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body mt-2 rounded shadow">
+              <h5 class="card-title">
+                <nobr>Thu</nobr>
+              </h5>
+              <p class="card-text">⛈</p>
+              <p class="card-text">
+                <nobr>58℉</nobr>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <footer id="footer">
+        <em>
+          <small>
+            Created by Olga Alivanova - She Codes - My Project - Weather App
+          </small></em
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
